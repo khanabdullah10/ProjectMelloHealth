@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="MelloHealth - India's leading digital healthcare platform. Book appointments, get health checkups, and access diagnostic services from the comfort of your home."
+    />
+    <meta
+      name="keywords"
+      content="healthcare, medical, diagnostics, blood tests, doctor consultation, health checkup, home service"
+    />
+    <meta name="author" content="MelloHealth" />
+    <meta name="theme-color" content="#2196F3" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="MelloHealth" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="MelloHealth - Healthcare at Your Fingertips"
+    />
+    <meta
+      property="og:description"
+      content="India's leading digital healthcare platform. Book appointments, get health checkups, and access diagnostic services from the comfort of your home."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mellohealth.com" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="MelloHealth - Healthcare at Your Fingertips"
+    />
+    <meta
+      name="twitter:description"
+      content="India's leading digital healthcare platform. Book appointments, get health checkups, and access diagnostic services from the comfort of your home."
+    />
+
+    <title>MelloHealth - Healthcare at Your Fingertips</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <link rel="stylesheet" href="/assets/static/css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/img/melloHeath.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/melloHeath.png" />
+    <link rel="apple-touch-icon" href="/assets/img/melloHeath.png" />
+    <link rel="apple-touch-icon-precomposed" href="/assets/img/melloHeath.png" />
+    <link rel="shortcut icon" type="image/png" href="/assets/img/melloHeath.png" />
+    <link rel="manifest" href="/manifest.json" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div
+      id="loading-screen"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #2196f3, #4caf50);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+      "
+    >
+      <div style="text-align: center; color: white">
+        <img 
+          src="/assets/img/melloHeath.png" 
+          alt="MelloHealth Logo" 
+          style="width: 80px; height: 80px; margin-bottom: 20px; filter: brightness(0) invert(1);"
+        />
+        <div style="font-size: 24px; font-weight: 600; margin-bottom: 10px">
+          MelloHealth
+        </div>
+        <div style="font-size: 14px; opacity: 0.8">
+          Loading your health journey...
+        </div>
+        <div
+          style="
+            width: 60px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+          "
+        >
+          <div
+            style="
+              width: 30%;
+              height: 100%;
+              background: white;
+              border-radius: 2px;
+              animation: loading 1.5s ease-in-out infinite;
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Header -->
+      <header class="header" role="banner">
+        <div class="logo">
+          <img src="/assets/img/melloHeath.png" alt="MelloHealth Logo" class="logo-image" />
+          <h1>MelloHealth</h1>
+        </div>
+        <nav class="header-buttons" role="navigation">
+          <button class="call-btn" aria-label="Call MelloHealth support team">
+            Call Us
+          </button>
+          <button
+            class="login-btn"
+            aria-label="Login to your MelloHealth account"
+          >
+            Log In
+          </button>
+        </nav>
+      </header>
+
+      <!-- WhatsApp Booking Section -->
+      <div class="whatsapp-section">
+        <div class="whatsapp-content">
+          <i class="fab fa-whatsapp whatsapp-icon"></i>
+          <div class="whatsapp-text">
+            <h3>Book your Appointment via WhatsApp</h3>
+            <p>Chat with us. Book your appointment in 2 min.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Services -->
+      <section
+        class="services-section"
+        role="region"
+        aria-label="Healthcare Services"
+      >
+        <div
+          class="service-item"
+          onclick="navigateToService('diagnostics')"
+          role="button"
+          tabindex="0"
+          aria-label="Book diagnostics services including blood tests and scans"
+        >
+          <div class="service-content">
+            <div class="service-icon diagnostics-icon" aria-hidden="true">
+              <i class="fas fa-vial"></i>
+            </div>
+            <div class="service-text">
+              <h3>Diagnostics: Blood Tests and Scans</h3>
+              <p>Save upto 50% on blood tests and scans</p>
+            </div>
+          </div>
+          <i class="fas fa-chevron-right service-arrow" aria-hidden="true"></i>
+        </div>
+
+        <div
+          class="service-item"
+          onclick="navigateToService('health-check')"
+          role="button"
+          tabindex="0"
+          aria-label="Book home health checkup services"
+        >
+          <div class="service-content">
+            <div class="service-icon health-check-icon" aria-hidden="true">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <div class="service-text">
+              <h3>Health Checks at Home</h3>
+              <p>Starting from <span class="price">₹499</span></p>
+            </div>
+          </div>
+          <i class="fas fa-chevron-right service-arrow" aria-hidden="true"></i>
+        </div>
+
+        <div
+          class="service-item"
+          onclick="navigateToService('consultation')"
+          role="button"
+          tabindex="0"
+          aria-label="Book doctor consultation services"
+        >
+          <div class="service-content">
+            <div class="service-icon consultation-icon" aria-hidden="true">
+              <i class="fas fa-user-md"></i>
+            </div>
+            <div class="service-text">
+              <h3>Doctor Consultations</h3>
+              <p>From the comfort of your home</p>
+            </div>
+          </div>
+          <i class="fas fa-chevron-right service-arrow" aria-hidden="true"></i>
+        </div>
+      </section>
+
+      <!-- Dashboard and App Section -->
+      <div class="dashboard-app-section">
+        <div class="dashboard-card" onclick="navigateToDashboard()">
+          <div class="dashboard-icon">
+            <i class="fas fa-th-large"></i>
+          </div>
+          <div class="dashboard-content">
+            <h3>My Dashboard</h3>
+            <p>Reports, prescriptions, profile etc.</p>
+          </div>
+        </div>
+
+        <div class="app-card" onclick="showEmergencyContact()">
+          <div class="app-icon">
+            <i class="fas fa-ambulance"></i>
+          </div>
+          <div class="app-content">
+            <h3>Emergency Contact</h3>
+            <p>24/7 emergency medical support</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Special Offers -->
+      <div class="special-offers">
+        <h2>SPECIAL OFFERS</h2>
+        <div class="offers-slider-container">
+          <div class="offers-slider">
+            <div class="offer-card">
+              <div class="offer-header">
+                <div class="offer-icon vitamin-icon">
+                  <i class="fas fa-pills"></i>
+                </div>
+                <div class="offer-details">
+                  <h3>Vitamin Check</h3>
+                  <div class="price-section">
+                    <span class="original-price">₹1800</span>
+                    <span class="discounted-price">₹599</span>
+                  </div>
+                </div>
+                <i class="fas fa-chevron-right offer-arrow"></i>
+              </div>
+              <p class="offer-description">
+                Includes tests for Vitamin D & Vitamin B12 with free home service.
+              </p>
+            </div>
+
+            <div class="offer-card">
+              <div class="offer-header">
+                <div class="offer-icon health-icon">
+                  <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="offer-details">
+                  <h3>Health Check</h3>
+                  <div class="price-section">
+                    <span class="original-price">₹1000</span>
+                    <span class="discounted-price">₹499</span>
+                  </div>
+                </div>
+                <i class="fas fa-chevron-right offer-arrow"></i>
+              </div>
+              <p class="offer-description">
+                Includes 38 tests covering Lipid, Thyroid, Kidney, Liver at home.
+              </p>
+            </div>
+
+            <div class="offer-card">
+              <div class="offer-header">
+                <div class="offer-icon diabetes-icon">
+                  <i class="fas fa-tint"></i>
+                </div>
+                <div class="offer-details">
+                  <h3>Diabetes Screening</h3>
+                  <div class="price-section">
+                    <span class="original-price">₹1200</span>
+                    <span class="discounted-price">₹399</span>
+                  </div>
+                </div>
+                <i class="fas fa-chevron-right offer-arrow"></i>
+              </div>
+              <p class="offer-description">
+                Complete diabetes profile with HbA1c, fasting glucose, and insulin levels.
+              </p>
+            </div>
+
+            <div class="offer-card">
+              <div class="offer-header">
+                <div class="offer-icon cardiac-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <div class="offer-details">
+                  <h3>Cardiac Health</h3>
+                  <div class="price-section">
+                    <span class="original-price">₹2500</span>
+                    <span class="discounted-price">₹899</span>
+                  </div>
+                </div>
+                <i class="fas fa-chevron-right offer-arrow"></i>
+              </div>
+              <p class="offer-description">
+                Comprehensive cardiac screening including lipid profile and cardiac markers.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Navigation Controls -->
+          <div class="slider-navigation">
+            <button class="nav-btn prev-btn" aria-label="Previous offer">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="slider-dots">
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+              <span class="dot" data-slide="3"></span>
+            </div>
+            <button class="nav-btn next-btn" aria-label="Next offer">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Section - Internet Hospital -->
+      <div class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            We are building India's
+            <span class="highlight-green"> Internet</span><br />
+            <span class="highlight-blue">Hospital</span>
+            <h3 style="font-family: 'Font Awesome 6 Brands'; font-size: larger; font-weight: bolder;padding: 21px; padding-bottom: -10px;">
+              From Lab to Doctor - All in ONE
+            </h3>
+          </h1>
+        </div>
+      </div>
+
+      <!-- Get Screened at Home Section -->
+      <div class="screening-section">
+        <div class="screening-content">
+          <h2 class="section-title">Get Screened at Home</h2>
+          <p class="section-subtitle">
+            1000s of tests, from the comfort of your home
+          </p>
+
+          <div class="screening-images">
+            <div class="main-image">
+              <img
+                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop"
+                alt="Mother and child at home"
+                class="family-image"
+              />
+            </div>
+            <!-- <div class="side-images">
+                        <div class="side-image">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=150&fit=crop" alt="Medical report on tablet" class="report-image">
+                        </div>
+                        <div class="side-image">
+                            <img src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?w=200&h=150&fit=crop" alt="Lab testing" class="lab-image">
+                        </div>
+                    </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Primary Care Doctor Section -->
+      <div class="doctor-section">
+        <div class="doctor-content">
+          <h2 class="section-title">Speak to a Primary Care Doctor</h2>
+          <p class="section-subtitle">
+            Easy-to-book appointments and follow-ups with online prescriptions
+          </p>
+
+          <div class="doctor-image">
+            <img
+              src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=250&fit=crop"
+              alt="Doctor consultation"
+              class="consultation-image"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews Section -->
+      <div class="reviews-section">
+        <div class="reviews-content">
+          <h2 class="reviews-title">
+            <span class="highlight-green">Highest</span>
+            <span class="highlight-blue">Rated</span><br />
+            Home Service Provider
+          </h2>
+
+          <div class="google-reviews">
+            <div class="google-logo">
+              <span class="google-g">G</span><span class="google-o1">o</span
+              ><span class="google-o2">o</span><span class="google-g2">g</span
+              ><span class="google-l">l</span
+              ><span class="google-e">e</span> Reviews
+            </div>
+            <div class="rating-score">4.8</div>
+            <div class="rating-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="review-count">14000+ reviews</div>
+          </div>
+
+          <div class="customer-stats">
+            <p class="customer-text">20L+ customers have chosen MelloHealth</p>
+            <p class="customer-text">to better their health and life</p>
+          </div>
+
+          <div class="satisfaction-rate">
+            <span class="percentage">95%</span> love their experience
+          </div>
+
+          <!-- Customer Reviews -->
+          <div class="customer-reviews">
+            <div class="review-card">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">SP</div>
+                <div class="reviewer-details">
+                  <h4>Srikanth Perneti</h4>
+                  <p>Hyderabad</p>
+                </div>
+              </div>
+              <p class="review-text">
+                I got my first blood test free with MelloHealth and had a smooth
+                and pleasant experience with the expertise of their employee who
+                came and collected the blood sample at home.
+              </p>
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">RT</div>
+                <div class="reviewer-details">
+                  <h4>Ravi</h4>
+                  <p>Mumbai</p>
+                </div>
+              </div>
+              <p class="review-text">
+                I'm using MelloHealth from a very long time and my impression I
+                had from the first time is still the same, even today, all the
+                technicians are well trained, professional and punctual. I am
+                satisfied with the services they provide.
+              </p>
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Accordion Section -->
+      <div class="footer-accordion">
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span>About Us</span>
+            <i class="fas fa-plus accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <p>
+              MelloHealth is India's leading digital healthcare platform
+              providing comprehensive health solutions including diagnostic
+              tests, doctor consultations, and health monitoring services.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span>Our Services</span>
+            <i class="fas fa-plus accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <ul>
+              <li>Home Sample Collection</li>
+              <li>Doctor Consultations</li>
+              <li>Health Check Packages</li>
+              <li>Diagnostic Tests</li>
+              <li>Medicine Delivery</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span>Home Service</span>
+            <i class="fas fa-plus accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <p>
+              Get medical services at your doorstep with our trained
+              professionals. We provide sample collection, health checkups, and
+              consultations from the comfort of your home.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span>Diagnostic Centers & Tests</span>
+            <i class="fas fa-plus accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <p>
+              Access to 1000+ diagnostic tests across India with
+              state-of-the-art laboratories and certified technicians ensuring
+              accurate and timely results.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span>Privacy Policy, Terms & Conditions, etc</span>
+            <i class="fas fa-plus accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <p>
+              Your privacy and data security are our top priorities. Read our
+              comprehensive privacy policy and terms of service for complete
+              information.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span>Knowledge Center</span>
+            <i class="fas fa-plus accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <p>
+              Access health articles, tips, and educational content to stay
+              informed about your health and wellness journey.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span>Contact Us</span>
+            <i class="fas fa-plus accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <p>
+              📞 Call: +91-123-456-7890<br />
+              📧 Email: support@mellohealth.com<br />
+              🕒 Available 24/7
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="main-footer">
+        <div class="footer-logo">
+          <img src="/assets/img/melloHeath.png" alt="MelloHealth Logo" style="width: 60px; height: 60px; margin-bottom: 15px; filter: brightness(0) invert(1);" />
+          <h2>MelloHealth</h2>
+        </div>
+        <div class="footer-copyright">
+          © 2025 Simplify Wellness India Private Limited All Rights Reserved
+        </div>
+        <div class="payment-methods">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
+            alt="Mastercard"
+            class="payment-icon"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg"
+            alt="Visa"
+            class="payment-icon"
+          />
+          <img
+            src="/assets/img/RuPay.svg"
+            alt="RuPay"
+            class="payment-icon"
+          />
+        </div>
+      </footer>
+    </div>
+
+    <script src="/assets/static/js/script.js"></script>
+  </body>
+</html>

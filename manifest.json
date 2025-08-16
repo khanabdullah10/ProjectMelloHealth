@@ -1,0 +1,21 @@
+{
+  "name": "MelloHealth",
+  "short_name": "MelloHealth",
+  "description": "India's leading digital healthcare platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2196F3",
+  "icons": [
+    {
+      "src": "/assets/img/melloHealth.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/melloHealth.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
